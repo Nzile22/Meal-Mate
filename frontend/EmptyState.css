@@ -1,0 +1,24 @@
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.empty-state p:first-of-type {
+  font-weight: 500;
+  font-size: 1.1rem;
+}

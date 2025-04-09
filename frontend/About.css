@@ -1,0 +1,42 @@
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-container h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.taglines {
+  margin: 2rem 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mission {
+  margin-top: 3rem;
+  text-align: left;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+}
+
+.mission h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.mission p {
+  line-height: 1.6;
+}

@@ -1,0 +1,191 @@
+/* Modern Recipes Page Styling */
+/* Light Theme (Default) */
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --text: #2b2d42;
+  --background: #f8f9fa;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  --border: rgba(0, 0, 0, 0.1);
+  --hover: rgba(67, 97, 238, 0.1);
+  --active: rgba(67, 97, 238, 0.2);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary: #4cc9f0;
+  --secondary: #4895ef;
+  --text: #f8f9fa;
+  --background: #121212;
+  --card-bg: rgba(30, 30, 30, 0.8);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --border: rgba(255, 255, 255, 0.1);
+  --hover: rgba(76, 201, 240, 0.1);
+  --active: rgba(76, 201, 240, 0.2);
+}
+
+/* Apply theme colors to all elements */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.2), rgba(58, 12, 163, 0.2));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.recipes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search-container {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 1rem 0;
+  z-index: 10;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: 0 2px 20px rgba(25, 118, 210, 0.2);
+}
+
+.category-section {
+  margin: 3rem 0;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Navbar Theme Toggle */
+.navbar-theme-toggle {
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text);
+  transition: all 0.3s ease;
+}
+
+/* Smooth theme transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recipes-page {
+    padding: 1rem;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-toggle {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

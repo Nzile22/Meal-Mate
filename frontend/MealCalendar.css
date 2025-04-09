@@ -1,0 +1,76 @@
+/* Modern Search Bar */
+.search-container {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.meal-search {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.meal-search:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+/* Larger Meal Images */
+.meal-thumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.add-to-calendar-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.add-to-calendar-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.meal-card:hover .meal-thumbnail {
+  transform: scale(1.05);
+}
+
+/* Rest of existing styles... */
+.calendar-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: calc(100vh - 100px);
+}
+
+/* ... (previous styles remain unchanged) ... */

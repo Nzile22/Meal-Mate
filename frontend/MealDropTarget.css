@@ -1,0 +1,22 @@
+.drop-target {
+  min-height: 50px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.drop-target:hover {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.drop-target.active {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+}
