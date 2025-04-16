@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/inno/new/Meal-Mate/backend/venv
+set -gx VIRTUAL_ENV /home/inno/final-grp-project-p4/Meal-Mate/backend/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
